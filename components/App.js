@@ -36,9 +36,9 @@ class App extends Component {
     console.log(accounts)
     this.setState({ account: accounts[0] })
     // Network ID
-    // const networkId = await web3.eth.net.getId()
+    const networkId = await web3.eth.net.getId()
     // console.log(networkId)
-    const networkId=5777;
+    // const networkId=5777;
     const networkData = Decentragram.networks[networkId]
     if(networkData) {
       const decentragram = new web3.eth.Contract(Decentragram.abi, networkData.address)
